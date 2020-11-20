@@ -1,0 +1,33 @@
+###consul服务端口号
+server:
+  port: 19991
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
+
+
+logging:
+  level:
+    root: info
+    com.apo: debug
+  file:
+    name: log/blog-dev.log
+
